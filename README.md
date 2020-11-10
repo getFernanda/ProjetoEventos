@@ -1,2 +1,2 @@
-# ProjetoEventos
+#weGether
 Projeto integrador Digital House 
