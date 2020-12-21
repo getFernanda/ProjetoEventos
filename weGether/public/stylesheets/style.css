@@ -6,3 +6,58 @@ body {
 a {
   color: #00B7FF;
 }
+
+hr{
+  background-color:#03989e;
+}
+
+/*******************************
+***** CSS to Login Page 
+*******************************/
+
+h1.title-login{
+  color: #03989e;
+  font-family: 'Quicksand';
+  font-weight: bold;
+  font-size: 54px;
+}
+
+input.login{
+  color: #03989e;
+  border: none;
+  background-color: #f4f4f4;
+  padding: 15px;
+  font-size: 18px;
+  border-radius: 0;
+}
+
+input.login::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #03989e;
+  opacity: 1; /* Firefox */
+}
+
+button.continuar{
+  background-color: #f5c651;
+  border: none;
+  margin: 0 auto;
+  color: white;
+  text-align: center;
+  border-radius: 0;
+  font-size: 22px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+button.continuar:hover{
+  background-color: #f7ba22;
+  color: white;
+}
+
+p.texto-cadastro{
+  color: #03989e;
+  font-size: 18px;
+}
+
+p.texto-cadastro a{
+  color: #f7ba22;
+}
