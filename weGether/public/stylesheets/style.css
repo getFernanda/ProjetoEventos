@@ -7,6 +7,7 @@ a {
   color: #00B7FF;
 }
 
+<<<<<<< HEAD
 hr{
   background-color:#03989e;
 }
@@ -123,3 +124,30 @@ form.formulario input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
 }
 
 
+=======
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.cabecalho {
+  display: flex;
+  list-style: none;
+}
+.cabecalho a {
+  margin-right: 30px;
+  color: #269599;
+}
+.cabecalho-botoes {
+  display: flex;
+  list-style: none;
+}
+.cabecalho-botoes button {
+  margin-right: 20px;
+  background-color: #F5C651;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 2px;
+}
+>>>>>>> 18624c5c085fce8fb21bcaa4f96e88f8100629e4
