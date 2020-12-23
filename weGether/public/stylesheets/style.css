@@ -15,6 +15,10 @@ hr{
 ***** CSS to Login Page 
 *******************************/
 
+.card {
+  border: none;
+}
+
 h1.title-login{
   color: #03989e;
   font-family: 'Quicksand';
@@ -61,3 +65,61 @@ p.texto-cadastro{
 p.texto-cadastro a{
   color: #f7ba22;
 }
+
+/********************************
+***** Dashboard - Dados pessoais
+********************************/
+
+ul.usuario-menu{
+  border:none;
+}
+
+ul.usuario-menu li{
+  border: none;
+  padding-top: 10px;
+}
+
+ul.usuario-menu li a{
+  color: #03989e;
+  font-size: 22px;
+}
+
+ul.usuario-menu li a:hover{
+  text-decoration: none;
+}
+
+ul.usuario-menu li a i{
+  padding: 10px;
+}
+
+
+h2.dados-pessoas {
+  color: #03989e;
+  font-size: 22px;
+  font-weight: bold;
+  border: none;
+  font-family: 'Quicksand';
+}
+
+form.formulario label{
+  color: #03989e;
+  font-size: 18px;
+  border: none;
+  font-family: 'Quicksand';
+}
+
+form.formulario input{
+  color: #03989e;
+  border: none;
+  background-color: #f4f4f4;
+  padding: 15px;
+  font-size: 18px;
+  border-radius: 0;
+}
+
+form.formulario input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #03989e;
+  opacity: 1; /* Firefox */
+}
+
+
