@@ -5,6 +5,7 @@ body {
 
 a {
   color: #00B7FF;
+  font-family: 'Quicksand';
 }
 
 hr{
@@ -93,7 +94,7 @@ ul.usuario-menu li a i{
 }
 
 
-h2.dados-pessoas {
+h2.dashboard-title {
   color: #03989e;
   font-size: 22px;
   font-weight: bold;
@@ -149,3 +150,30 @@ header {
   border-radius: 2px;
 }
 
+
+/********************************
+***** Dashboard - Meus eventos
+********************************/
+
+div.meus-eventos {
+  display: block;
+  display: #312F4F;
+  width: 100%;
+  border: 1px solid #ced4da;
+  background: #f4f4f4;
+  padding: 20px;
+  border: none;
+}
+
+div.meus-eventos li{
+  list-style: none;
+}
+
+div.meus-eventos li a {
+  color: #03989e;
+  font-size: 22px;
+}
+
+div.evento-passado li a {
+  color: #cccccc;
+}
