@@ -150,7 +150,6 @@ header {
   border-radius: 2px;
 }
 
-
 /********************************
 ***** Dashboard - Meus eventos
 ********************************/
@@ -176,4 +175,71 @@ div.meus-eventos li a {
 
 div.evento-passado li a {
   color: #cccccc;
+
+  
+main {
+  display: flex;
+  flex-direction: column;
+}
+.part-1 {
+  display: flex;
+  margin-bottom: 40px;
+}
+.container-1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.container-1 h1 {
+  color: #F5C651;
+}
+.container-1 p {
+  color: #269599;
+  line-height: 30px;
+}
+.button-hospedar {
+  background-color: #F5C651;
+  color: white;
+  border: none;
+  border-radius: 2px;
+  padding: 10px;
+  margin-bottom: 15px;
+  width: 100%;
+}
+.button-acessar {
+  border: 2px solid #269599;
+  color: #269599;
+  background-color: white;
+  padding: 10px;
+  width: 100%;
+}
+.part-2 {
+  margin-bottom: 40px;
+}
+.part-2 h2 {
+  color: #F5C651;
+  text-align: center;
+}
+.part-3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.part-3 h3 {
+  color: #F5C651;
+  margin-bottom: 30px;
+}
+.part-3 p{
+  color: #269599;
+  width: 20%;
+  margin-bottom: 30px;
+}
+  
+.part-3 button {
+  background-color: #F5C651;
+  color: white;
+  border: none;
+  padding: 10px;
+  width: 20%;
+  align-items: center;
 }
