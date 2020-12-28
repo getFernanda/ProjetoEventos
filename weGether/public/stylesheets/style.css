@@ -123,6 +123,7 @@ form.formulario input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
   opacity: 1; /* Firefox */
 }
 
+/* HEADER  */
 
 header {
   display: flex;
@@ -136,6 +137,7 @@ header {
 .cabecalho a {
   margin-right: 30px;
   color: #269599;
+  font-size: 15px;
 }
 .cabecalho-botoes {
   display: flex;
@@ -242,4 +244,113 @@ main {
   padding: 10px;
   width: 20%;
   align-items: center;
+}
+
+/* CSS página de cadastro */
+
+.main-cadastro {
+  display: flex;
+  justify-content:space-around;
+}
+.form-cadastro {
+  display: flex;
+  flex-direction: column;
+}
+.meus-dados-pessoais {
+  width: 50%;
+}
+.menu-itens {
+  list-style: none;
+  display: flex;
+  align-items:center;
+  margin-bottom: 20px;
+}
+.menu-itens a {
+  color: #269599;
+  margin-left: 20px;
+}
+.menu-itens button {
+  background-color: #F5C651;
+  color: white;
+  border: none;
+  border-radius: 2px;
+  padding: 10px;
+  width: 280px;
+}
+.form-dados-pessoais {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.form-titulo {
+  color: #269599;
+  margin-bottom: 20px;
+}
+.form-cadastro label {
+  color: #269599;
+  margin-right: 20px;
+}
+.form-cadastro input {
+  background-color: #d4d0d0;
+  border: none;
+  width: 100%;
+  height: 30px;
+}
+.input-cadastro {
+  display: flex;
+  margin-bottom: 10px;
+  width: 600px;
+}
+.form-dados-pessoais button {
+  background-color: #f5c651;
+  color: white;
+  border: none;
+  border-radius: 2px;
+  padding: 10px;
+  width: 200px;
+}
+
+@media (max-width: 380px) {
+  
+  /* HEADER MOBILE  */
+  header {
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+  }
+  .cabecalho {
+    flex-direction: column;
+    margin-bottom: 30px;
+    align-items: center;
+    justify-content:center;
+  }
+  .cabecalho a {
+    margin-bottom: 20px;
+  }
+  .cabecalho-botoes {
+    flex-direction: column;
+  }
+  .cabecalho-botoes button {
+    margin-bottom: 20px;
+  }
+  /* HOME MOBILE  */
+  main {
+    width: 100vw;
+    align-items: center;
+  }
+  .part-1 {
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+    width: 60vw;
+  }
+  .container-2 img {
+    
+  }
+  part-2 {
+    
+  }
+
 }
