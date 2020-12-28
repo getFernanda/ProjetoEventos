@@ -1,0 +1,61 @@
+<%- include('./partials/head'); %>
+
+<%- include('./partials/header'); %>
+
+<div class="main-cadastro">
+    <div class="menu-dados-pessoais">
+        <ul>
+            <li class="menu-itens">
+                <img src="img/icone-dados-pessoais.jpg" alt="">
+                <a href='#'>Dados Pessoais</a>
+            </li>
+            <li class="menu-itens">
+                <img src="img/icone-meus-eventos.jpg" alt="">
+                <a href='#'>Meus Eventos</a>
+            </li>
+            <li class="menu-itens">
+                <img src="img/icone-seguranca.jpg" alt="">
+                <a href='#'>Segurança</a>
+            </li>
+            <li class="menu-itens">
+                <button type="button">Logout</button>
+            </li>
+        </ul>
+    </div>
+
+    <div class="form-dados-pessoais">
+        <h1 class="form-titulo">Dados Pessoais</h1>
+        <form class="form-cadastro" action="">
+            
+            <div class="input-cadastro">
+                <label for="nome-completo" class="label-cadastro">Nome Completo:</label>
+                <input type="text" class="input-cadastro" name="nome-completo">
+            </div>
+            <div class="input-cadastro">
+                <label for="email" class="label-cadastro">Email:</label>
+                <input type="email" class="input-cadastro" name="email">
+            </div>
+             
+            <div class="input-cadastro">
+                <label for="telefone" class="label-cadastro">Telefone:</label>
+                <input type="text" class="input-cadastro" name="telefone">   
+            </div>
+
+            <div class="input-cadastro">
+                <label for="empresa" class="label-cadastro">Empresa:</label>
+                <input type="text" class="input-cadastro" name="empresa">
+            </div>
+            
+            <div class="input-cadastro">
+                <label for="cargo" class="label-cadastro">Cargo:</label>
+                <input type="text" class="input-cadastro" name="cargo">
+            </div>
+           
+            
+        </form>
+        <button type="submit">Confirmar</button>
+
+    </div>
+</div>
+
+<%- include('./partials/footer'); %>
