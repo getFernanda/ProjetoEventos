@@ -8,5 +8,9 @@ router.get('/', function(req, res, next) {
 
 router.get('/cadastro', function(req, res, next){
   res.render('cadastro')
-})
+});
+
+router.get('/plenaria', function(req, res, next){
+  res.render('plenaria')
+});
 module.exports = router;
