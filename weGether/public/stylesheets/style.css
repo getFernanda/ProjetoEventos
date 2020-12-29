@@ -111,3 +111,243 @@ hr{
 }
 
 
+a {
+  color: #00B7FF;
+  font-family: 'Quicksand';
+}
+
+hr{
+  background-color:#03989e;
+}
+
+/*******************************
+***** CSS to Login Page 
+*******************************/
+
+.card {
+  border: none;
+}
+
+h1.title-login{
+  color: #03989e;
+  font-family: 'Quicksand';
+  font-weight: bold;
+  font-size: 54px;
+}
+
+input.login{
+  color: #03989e;
+  border: none;
+  background-color: #f4f4f4;
+  padding: 15px;
+  font-size: 18px;
+  border-radius: 0;
+}
+
+input.login::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #03989e;
+  opacity: 1; /* Firefox */
+}
+
+button.continuar{
+  background-color: #f5c651;
+  border: none;
+  margin: 0 auto;
+  color: white;
+  text-align: center;
+  border-radius: 0;
+  font-size: 22px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+button.continuar:hover{
+  background-color: #f7ba22;
+  color: white;
+}
+
+p.texto-cadastro{
+  color: #03989e;
+  font-size: 18px;
+}
+
+p.texto-cadastro a{
+  color: #f7ba22;
+}
+
+/********************************
+***** Dashboard - Dados pessoais
+********************************/
+
+ul.usuario-menu{
+  border:none;
+}
+
+ul.usuario-menu li{
+  border: none;
+  padding-top: 10px;
+}
+
+ul.usuario-menu li a{
+  color: #03989e;
+  font-size: 22px;
+}
+
+ul.usuario-menu li a:hover{
+  text-decoration: none;
+}
+
+ul.usuario-menu li a i{
+  padding: 10px;
+}
+
+
+h2.dashboard-title {
+  color: #03989e;
+  font-size: 22px;
+  font-weight: bold;
+  border: none;
+  font-family: 'Quicksand';
+}
+
+form.formulario label{
+  color: #03989e;
+  font-size: 18px;
+  border: none;
+  font-family: 'Quicksand';
+}
+
+form.formulario input{
+  color: #03989e;
+  border: none;
+  background-color: #f4f4f4;
+  padding: 15px;
+  font-size: 18px;
+  border-radius: 0;
+}
+
+form.formulario input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #03989e;
+  opacity: 1; /* Firefox */
+}
+
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.cabecalho {
+  display: flex;
+  list-style: none;
+}
+.cabecalho a {
+  margin-right: 30px;
+  color: #269599;
+}
+.cabecalho-botoes {
+  display: flex;
+  list-style: none;
+}
+.cabecalho-botoes button {
+  margin-right: 20px;
+  background-color: #F5C651;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 2px;
+}
+
+/********************************
+***** Dashboard - Meus eventos
+********************************/
+
+div.meus-eventos {
+  display: block;
+  display: #312F4F;
+  width: 100%;
+  border: 1px solid #ced4da;
+  background: #f4f4f4;
+  padding: 20px;
+  border: none;
+}
+
+div.meus-eventos li{
+  list-style: none;
+}
+
+div.meus-eventos li a {
+  color: #03989e;
+  font-size: 22px;
+}
+
+div.evento-passado li a {
+  color: #cccccc;
+
+} 
+main {
+  display: flex;
+  flex-direction: column;
+}
+.part-1 {
+  display: flex;
+  margin-bottom: 40px;
+}
+.container-1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.container-1 h1 {
+  color: #F5C651;
+}
+.container-1 p {
+  color: #269599;
+  line-height: 30px;
+}
+.button-hospedar {
+  background-color: #F5C651;
+  color: white;
+  border: none;
+  border-radius: 2px;
+  padding: 10px;
+  margin-bottom: 15px;
+  width: 100%;
+}
+.button-acessar {
+  border: 2px solid #269599;
+  color: #269599;
+  background-color: white;
+  padding: 10px;
+  width: 100%;
+}
+.part-2 {
+  margin-bottom: 40px;
+}
+.part-2 h2 {
+  color: #F5C651;
+  text-align: center;
+}
+.part-3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.part-3 h3 {
+  color: #F5C651;
+  margin-bottom: 30px;
+}
+.part-3 p{
+  color: #269599;
+  width: 20%;
+  margin-bottom: 30px;
+}
+  
+.part-3 button {
+  background-color: #F5C651;
+  color: white;
+  border: none;
+  padding: 10px;
+  width: 20%;
+  align-items: center;
+}
