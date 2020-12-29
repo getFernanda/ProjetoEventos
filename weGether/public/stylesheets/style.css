@@ -1,8 +1,113 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+
+
+/* CSS to Footer  */
+
+.footer {
+
+display: flex;
+
+flex-direction: row;
+flex-wrap: wrap;
+align-content: center; 
+
+height: 187px;
+width:  100%;
+
+margin-top: 100px;
+border: none;
+
+background-color: #03989e;
+color: #fcfcfc;
+
+font-family: Quicksand;
+font-weight: normal;
+
+
 }
 
-a {
-  color: #00B7FF;
+
+.site-map ul{
+
+  display: flex;
+  position: relative;
+  float: left;
+  align-self: center;
+  list-style: none;
+  text-decoration: none;
+  width:50%;
+
+  margin-top: 50px;
+  right: 120px;
+  
+
 }
+
+.site-map ul li a {
+
+  display: flex;
+  justify-content: flex-start;
+  padding: 66px 16px 0px 28px;
+
+  
+  color: #fcfcfc;
+  font-weight: 300;
+  font-size: 22px; 
+  list-style: 20px;
+
+
+  
+}
+
+
+hr{
+  
+  display: flex;
+  background-color: #fcfcfc;
+  box-sizing:border-box;
+  width: 90%; 
+
+  
+
+}
+
+.icons ul{
+
+  display: flex;
+  position: relative;
+  float: right;
+  justify-content:flex-end; 
+
+ 
+  list-style: none;
+  width: 50%; 
+  margin-top: 100px;
+  left: 100px;
+ 
+  
+
+}
+
+.icons ul li{
+
+  display: flex;
+  padding-left: 25px;
+
+}
+
+.instagram{
+  padding-right: 90px;
+}
+
+
+.text-white{
+  display: flex;
+  justify-self: flex-start;
+
+  margin: 5px 80px 60px 70px;
+
+  font-size: 15px;
+
+ 
+}
+
+
