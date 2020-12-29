@@ -311,6 +311,66 @@ main {
   padding: 10px;
   width: 200px;
 }
+/* PLENARIA  */
+
+.banner-plenaria {
+  display: flex;
+  flex-direction: column;
+  background-color: #312F4F;
+  align-items:center;
+  justify-content: center;
+}
+.banner-plenaria img {
+  width: 260px;
+  height: 120px;
+}
+.plenaria-links {
+  display: flex;
+}
+.plenaria-links a {
+  margin-right: 60px;
+  margin-bottom: 10px;
+  color: white;
+}
+.main-plenaria h1 {
+  text-align: center;
+  color: #269599;
+}
+.plenaria-info {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 80px;
+}
+.plenaria-resumo h2 {
+   color: #f5c651;
+}
+.plenaria-resumo p {
+  color: #269599;
+}
+.plenaria-botoes{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items:center;
+}
+.plenaria-botoes button {
+  background-color: white;
+  color: #269599;
+  padding: 10px;
+  border: solid 2px #269599;
+}
+.plenaria-espectadores {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.plenaria-espectadores p {
+  color: #269599;
+}
+.plenaria-videos {
+  display: flex;
+  justify-content: space-around;
+}
 
 @media (max-width: 380px) {
   
