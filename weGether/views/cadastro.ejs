@@ -2,28 +2,34 @@
 
 <%- include('./partials/header'); %>
 
-<div class="main-cadastro">
-    
-    <%- include('./partials/menu.ejs')  %> 
+<div class="cadastro">
+    <h1 class="form-titulo">Cadastro</h1>
+    <form class="form-cadastro" action="">
+        <div class="input-cadastro">
+            <label for="nome-completo" class="label-cadastro">Nome Completo:</label>
+            <input type="text" class="input-cadastro" name="nome-completo">
+        </div>
+        <div class="input-cadastro">
+            <label for="email" class="label-cadastro">Email:</label>
+            <input type="email" class="input-cadastro" name="email">
+        </div>
+         
+        <div class="input-cadastro">
+            <label for="telefone" class="label-cadastro">Telefone:</label>
+            <input type="text" class="input-cadastro" name="telefone">   
+        </div>
 
-    <div class="form-dados-pessoais">
-        <h1 class="form-titulo">Dados Pessoais</h1>
-        <form class="form-cadastro" action="">
-            
-            <div class="input-cadastro">
-                <label for="nome-completo" class="label-cadastro">Nome Completo:</label>
-                <input type="text" class="input-cadastro" name="nome-completo">
-            </div>
-            <div class="input-cadastro">
-                <label for="email" class="label-cadastro">Email:</label>
-                <input type="email" class="input-cadastro" name="email">
-            </div>
-             
-            <div class="input-cadastro">
-                <label for="telefone" class="label-cadastro">Telefone:</label>
-                <input type="text" class="input-cadastro" name="telefone">   
-            </div>
+        <div class="input-cadastro">
+            <label for="empresa" class="label-cadastro">Empresa:</label>
+            <input type="text" class="input-cadastro" name="empresa">
+        </div>
+        
+        <div class="input-cadastro">
+            <label for="cargo" class="label-cadastro">Cargo:</label>
+            <input type="text" class="input-cadastro" name="cargo">
+        </div>
 
+<<<<<<< HEAD
             <div class="input-cadastro">
                 <label for="empresa" class="label-cadastro">Empresa:</label>
                 <input type="text" class="input-cadastro" name="empresa">
@@ -40,6 +46,16 @@
         <button type="submit">Confirmar</button>
 
     </div>
+=======
+        <div class="input-cadastro">
+            <label for="senha" class="label-cadastro">Senha:</label>
+            <input type="text" class="input-cadastro" name="senha">
+        </div>
+       
+    </form>
+     <button type="submit">Confirmar</button>
+>>>>>>> 3d1cfdc6ba0e33d514a7199458c42bae29bd3afa
 </div>
+
 
 <%- include('./partials/footer'); %>

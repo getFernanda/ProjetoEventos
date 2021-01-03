@@ -6,14 +6,15 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
-router.get('/cadastro', function(req, res, next){
-  res.render('cadastro')
+router.get('/area-usuario', function(req, res, next){
+  res.render('area-usuario')
 });
 
 router.get('/plenaria', function(req, res, next){
   res.render('plenaria')
 });
 
+<<<<<<< HEAD
 router.get('/seguranca', function(req, res, next){
   res.render('seguranca')
 });
@@ -38,4 +39,13 @@ router.get('/login', function(req, res, next) {
   res.render('login');
 });
 
+=======
+router.get('/trilha', function(req, res, next){
+  res.render('trilha')
+});
+
+router.get('/cadastro', function(req, res, next){
+  res.render('cadastro')
+});
+>>>>>>> 3d1cfdc6ba0e33d514a7199458c42bae29bd3afa
 module.exports = router;
