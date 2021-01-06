@@ -12,6 +12,125 @@ hr{
   background-color:#03989e;
 }
 
+/* CSS to Footer  */
+
+.footer {
+
+display: flex;
+
+flex-direction: row;
+flex-wrap: wrap;
+align-content: center; 
+
+height: 187px;
+width:  100%;
+
+margin-top: 100px;
+border: none;
+
+background-color: #03989e;
+color: #fcfcfc;
+
+font-family: Quicksand;
+font-weight: normal;
+
+
+}
+
+
+.site-map ul{
+
+  display: flex;
+  position: relative;
+  float: left;
+  align-self: center;
+  list-style: none;
+  text-decoration: none;
+  width:50%;
+
+  margin-top: 50px;
+  right: 120px;
+  
+
+}
+
+.site-map ul li a {
+
+  display: flex;
+  justify-content: flex-start;
+  padding: 66px 0px 0px 28px;
+  margin-left: 60px ;
+
+  
+  color: #fcfcfc;
+  font-weight: 300;
+  font-size: 15px; 
+  list-style: none;
+
+
+  
+}
+
+
+hr{
+  
+  display: flex;
+  background-color: #fcfcfc;
+  box-sizing:border-box;
+  width: 90%; 
+
+  
+
+}
+
+.icons ul{
+
+  display: flex;
+  position: relative;
+  float: right;
+  justify-content:flex-end; 
+
+ 
+  list-style: none;
+  width: 50%; 
+  margin-top: 100px;
+  left: 100px;
+ 
+  
+
+}
+
+.icons ul li{
+
+  display: flex;
+  padding-left: 25px;
+
+}
+
+.instagram{
+  padding-right: 90px;
+}
+
+
+.text-white{
+  display: flex;
+  justify-self: flex-start;
+
+  margin: 5px 80px 60px 70px;
+
+  font-size: 15px;
+
+ 
+}
+
+
+a {
+  color: #00B7FF;
+  font-family: 'Quicksand';
+}
+
+
+
 /*******************************
 ***** CSS to Login Page 
 *******************************/
@@ -384,6 +503,109 @@ main {
   display: flex;
   justify-content: space-around;
 }
+
+/* SEGURANÇA */
+.security{
+  display: flex;
+  justify-content:space-around;
+}
+
+.change-pass{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 150px;
+ 
+  
+
+}
+
+.input-pass{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.title{
+  display: flex;
+  
+  top: 42px;
+  
+  /* margin-bottom: 200px; */
+  margin-right: 590px;
+  
+  color: #269599;
+  font-family: Quicksand;
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+.password{
+  
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.new{
+  display: flex;
+  margin-bottom: 10px;
+  width: 600px;
+}
+
+.password input{
+  background-color: #d4d0d0;
+  border: none;
+  width: 300%;
+  height: 30px;
+  margin-top: 40px;
+}
+.new label.new-pass{
+
+  display: flex;
+  align-self: start;
+  
+  margin-left: -65px;
+  padding-top: 40px; 
+
+  width: 50%;
+
+  color: #269599;
+  font-family: Quicksand;
+  font-weight: 400;
+  line-height: 24px;
+
+
+}
+
+.label-senha {
+  background-color: #d4d0d0;
+  border: none;
+  width: 100%;
+  height: 30px;
+}
+
+button.save-pass{
+
+  background-color: #F5C651;
+  color: white;
+  border: none;
+  border-radius: 2px;
+  padding: 10px;
+  width: 280px;
+  margin-top: 58px;
+
+  
+}
+
+
+
+
 
 @media (max-width: 380px) {
   
