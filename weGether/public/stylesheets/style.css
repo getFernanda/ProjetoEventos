@@ -535,7 +535,7 @@ main {
   
   top: 42px;
   
-  /* margin-bottom: 200px; */
+  
   margin-right: 590px;
   
   color: #269599;
@@ -565,6 +565,7 @@ main {
   height: 30px;
   margin-top: 40px;
 }
+
 .new label.new-pass{
 
   display: flex;
@@ -602,6 +603,208 @@ button.save-pass{
 
   
 }
+
+/* HOME DO EVENTO */
+
+.content{
+  display: flex;
+
+}
+
+h1 {
+  display: flex;
+  align-self: center;
+  font-family: Quicksand; 
+  color: #269599;
+  font-weight: 400;
+  line-height: 40px;
+  font-weight: bold;
+
+}
+
+.imagem{
+  display: flex;
+  align-self:stretch;
+  width: 871px;
+  height:546px;
+  
+}
+
+.destaque-plenaria{
+  display: flex;
+  flex-direction: row; 
+  justify-content: space-between;
+}
+
+.h1-plenaria{
+  display: flex;
+  justify-content:center; 
+  margin-top: 50px;
+}
+
+.h2-title{
+  margin-bottom: 50px; 
+}
+
+
+.destaque-plenaria .imagem{
+  display: flex;
+  order: 1;
+}
+
+.destaque-plenaria .dados-do-palestrante{
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+
+  margin-right: 70px;
+  margin-left: 10px;
+ 
+  font-family: quicksand;
+  color: #F5C651; 
+
+}
+
+.dados-do-palestrante{
+  display: flex;
+  flex-direction: column;
+  line-height: 30px;
+  
+  margin-right: 70px;
+  margin-left: 80px;
+ 
+  color: #F5C651; 
+ 
+
+}
+
+.dados-do-palestrante p.item{
+  
+  line-height: 25px;
+  font-size: 18px;
+  
+}
+.dados-do-palestrante p button.acessar{
+
+  background-color: #F5C651;
+  color: #ffffff;
+  border: none;
+  border-radius: 2px;
+  padding: 10px;
+  width: 280px;
+
+}
+
+.dados-do-palestrante span.participantes-plenaria{
+  
+  color: #269599; 
+  padding-bottom: 20px;
+
+}
+
+p button.acessar{
+  margin-top: 40px;
+}
+
+p button.agenda{
+  margin-bottom: 50px;
+}
+
+
+.dados-do-palestrante p button.agenda{
+
+  background-color: #ffffff; 
+  color:  #269599;
+  border-style: solid;
+  border-color: #269599;
+  border-radius: 2px;
+  padding: 10px;
+  width: 280px;
+
+}
+
+
+.dados-do-palestrante span.participantes{
+  
+  color: #269599; 
+
+
+}
+
+.h1-trilha{
+  display: flex;
+  align-self: center;
+}
+
+.trilha{
+  margin-left: 120px; 
+}
+
+.trilha p{
+  color: #269599; 
+}
+
+.destaque-trilha{
+  display: flex;
+  flex-direction: row; 
+  justify-content: space-between;
+
+}
+
+.destaque-trilha .dados-do-palestrante{
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+
+  margin-right: 10px;
+  margin-left: 70px;
+ 
+  font-family: quicksand;
+  color: #F5C651; 
+}  
+
+
+.h2-title-trilha{
+  margin-bottom: 50px; 
+}
+
+.salao{
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.texto-salao{
+  color: #269599; 
+  font-family: quicksand; 
+}
+
+.h1-salao{
+  justify-content: center;
+}
+
+  /* QUEM SOMOS */
+
+.conteudo{
+  display: flex;
+  flex-direction: column;
+}
+
+.quem-somos{
+  font-family:Quicksand; 
+}
+
+.text-1{
+
+  align-items: flex-start;
+  margin-top: 50px;
+  color: #269599;
+  line-height: 20px; 
+}
+
+
+
 
 
 
