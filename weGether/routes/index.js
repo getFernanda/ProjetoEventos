@@ -14,9 +14,6 @@ router.get('/plenaria', function(req, res, next){
   res.render('plenaria')
 });
 
-router.get('/seguranca', function(req, res, next){
-  res.render('seguranca')
-});
 
 
 router.get('/home-do-evento', function(req, res, next){
@@ -43,7 +40,9 @@ router.get('/cadastro', function(req, res, next){
   res.render('cadastro')
 });
 
+
 router.get('/quem-somos', function(req, res, next){
   res.render('quem-somos')
 });
+
 module.exports = router;
