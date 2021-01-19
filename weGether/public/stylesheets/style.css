@@ -13,6 +13,17 @@ hr{
 }
 
 /* CSS to Footer  */
+.foot {
+  background-color: #269599 !important;
+  margin-top: 20px;
+}
+
+.footer-items-1 {
+  margin-right: 500px;
+}
+.footer-item {
+  color: white !important;
+}
 
 .footer {
 
@@ -244,28 +255,22 @@ form.formulario input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
 
 /* HEADER  */
 
-header {
+.header {
+  background-color: white !important;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
-.cabecalho {
-  display: flex;
-  list-style: none;
-}
-.cabecalho a {
+
+.header-itens {
   margin-right: 30px;
-  color: #269599;
+  color: #269599 !important;
   font-size: 15px;
 }
-.cabecalho-botoes {
-  display: flex;
-  list-style: none;
-}
-.cabecalho-botoes button {
-  margin-right: 20px;
-  background-color: #F5C651;
-  color: white;
+
+.home-button {
+  margin-right: 10px;
+  margin-top: 20px;
+  background-color: #F5C651 !important;
+  color: white !important;
   border: none;
   padding: 10px;
   border-radius: 2px;
@@ -813,6 +818,9 @@ p button.agenda{
 @media (max-width: 380px) {
   
   /* HEADER MOBILE  */
+  .home-button {
+    margin-bottom: 20px;
+  }
   header {
     flex-direction: column;
     align-items: center;
@@ -844,9 +852,7 @@ p button.agenda{
     justify-content:center;
     width: 60vw;
   }
-  .container-2 img {
-    
-  }
+ 
   part-2 {
     
   }
