@@ -17,7 +17,7 @@ router.get('/plenaria', function(req, res, next){
 
 
 router.get('/home-do-evento', function(req, res, next){
-  res.render('homeDoEvento')
+  res.render('home_do_evento')
 });
 
 router.get('/dados-pessoais', function(req, res, next) {
@@ -43,6 +43,10 @@ router.get('/cadastro', function(req, res, next){
 
 router.get('/quem-somos', function(req, res, next){
   res.render('quem-somos')
+});
+
+router.get('/seguranca', function(req, res, next){
+  res.render('seguranca')
 });
 
 module.exports = router;
