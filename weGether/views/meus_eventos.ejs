@@ -3,35 +3,7 @@
 <%- include('./partials/header.ejs') %> 
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
-            <div class="card">
-                <div class="card-body">
-                    <ul class="list-group list-group-flush usuario-menu">
-                        <li class="list-group-item">
-                            <a href="#">
-                                <i class="Dados Pessoais"><img src='/img/user.svg'></i>
-                                Dados Pessoais
-                            </a>
-                        </li>
-                        <li class="list-group-item">
-                            <a href="#">
-                                <i class="Calendario"><img src='/img/calendario.svg'></i>
-                                Meus Eventos
-                            </a>
-                        </li>
-                        <li class="list-group-item">
-                            <a href="#">
-                                <i class="Lock"><img src='/img/cadeado.svg'></i>
-                                Segurança
-                            </a>
-                        </li>
-                        <li class="list-group-item">
-                            <button class="btn btn-danger">Logout</button>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+        <%- include('./partials/menu.ejs') %>
         <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12">
             <div class="card">
                 <div class="card-body">
