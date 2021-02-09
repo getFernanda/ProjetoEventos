@@ -1,5 +1,5 @@
 body {
-  padding: 50px;
+  margin: 0 auto;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
@@ -15,7 +15,6 @@ hr{
 /* CSS to Footer  */
 .foot {
   background-color: #269599 !important;
-  margin-top: 20px;
 }
 
 .footer-items-1 {
@@ -26,18 +25,10 @@ hr{
 }
 
 .footer {
-
-display: flex;
-
-flex-direction: row;
-flex-wrap: wrap;
 align-content: center; 
 
-height: 187px;
-width:  100%;
 
-margin-top: 100px;
-border: none;
+width:  100%;
 
 background-color: #03989e;
 color: #fcfcfc;
@@ -58,8 +49,6 @@ font-weight: normal;
   list-style: none;
   text-decoration: none;
   width:50%;
-
-  margin-top: 50px;
   right: 120px;
   
 
@@ -69,17 +58,12 @@ font-weight: normal;
 
   display: flex;
   justify-content: flex-start;
-  padding: 66px 0px 0px 28px;
+  padding: 10px 0px 0px 28px;
   margin-left: 60px ;
-
-  
   color: #fcfcfc;
   font-weight: 300;
   font-size: 15px; 
   list-style: none;
-
-
-  
 }
 
 
@@ -100,15 +84,9 @@ hr{
   position: relative;
   float: right;
   justify-content:flex-end; 
-
- 
   list-style: none;
-  width: 50%; 
-  margin-top: 100px;
-  left: 100px;
- 
-  
-
+  margin-top: 10px;
+  float: right;
 }
 
 .icons ul li{
