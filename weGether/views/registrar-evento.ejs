@@ -1,0 +1,66 @@
+<%- include('./partials/head'); %>
+
+<%- include('./partials/header'); %>
+
+<div class="conteiner">
+    <div class="cadastro mb-4">
+        <h1 class="form-titulo">Criar um novo evento</h1>
+        <form class="form-horizontal formulario" action="">
+            <div class="form-group row">
+            <div class="col-sm-12">
+                <input placeholder="Nome do evento" type="text" class="form-control" name="nome">
+            </div>
+            </div>
+            <div class="form-group row">
+            <div class="col-sm-9">
+                <input placeholder="Tema do evento"type="text" class="input-cadastro" name="tema">
+            </div>   
+            </div>
+
+            <div class="form-group row"> 
+            <div class="col-sm-9">
+                <input placeholder="Data de início: XX/XX/XXXX"type="text" class="input-cadastro" name="data-inicio">   
+            </div>
+            </div>
+            
+            <div class="form-group row">
+            <div class="col-sm-9">
+                <input placeholder="Data do fim: XX/XX/XXXX"type="text" class="input-cadastro" name="data-fim">
+            </div>
+            </div>
+
+            <div class="form-group row">
+            <div class="col-sm-9">
+                <input placeholder="Horário do início: 00:00"type="text" class="input-cadastro" name="horario-inicio">
+            </div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-sm-9">
+                    <input placeholder="Horário do término: 00:00" type="text" class="input-cadastro" name="horario-término">
+                </div>
+                </div>
+
+            <div class="form-group row">    
+            <div class="col-sm-9">
+                <input placeholder="Preço"type="number" class="input-cadastro" name="preco">
+            </div>
+            </div>  
+
+            <div class="form-group row">    
+                <div class="col-sm-9">
+                    <input placeholder="Data início das vendas: XX/XX/XXXX"type="number" class="input-cadastro" name="inicio-vendas">
+                </div>
+                </div>  
+            
+                
+            </form>
+
+            <button href="#" type="submit">Confirmar</button>
+
+    </div>
+</div>
+    
+
+
+<%- include('./partials/footer'); %>
