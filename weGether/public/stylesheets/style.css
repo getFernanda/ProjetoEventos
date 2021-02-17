@@ -149,7 +149,7 @@ input.login::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
   opacity: 1; /* Firefox */
 }
 
-button.continuar{
+input.continuar{
   background-color: #f5c651;
   border: none;
   margin: 0 auto;
@@ -161,7 +161,7 @@ button.continuar{
   padding-right: 40px;
 }
 
-button.continuar:hover{
+input.continuar:hover{
   background-color: #f7ba22;
   color: white;
 }

@@ -15,20 +15,18 @@
                                 <div class="text-center">
                                     <h1 class="h1 text-gray-900 mb-4 title-login">Login do usuário</h1>
                                 </div>
-                                <form class="user">
+                                <form class="user" action="/auth/login" method="POST" >
                                     <div class="form-group">
                                         <input type="email" class="form-control form-control-user login"
-                                            id="exampleInputEmail" aria-describedby="emailHelp"
+                                            id="email" name="email" aria-describedby="emailHelp"
                                             placeholder="e-mail">
                                     </div>
                                     <div class="form-group">
                                         <input type="password" class="form-control form-control-user login"
-                                            id="exampleInputPassword" placeholder="senha">
+                                            id="password" name="password" placeholder="senha">
                                     </div>
                                     <div class="form-group text-center">
-                                        <button class="btn continuar">
-                                            Continuar
-                                        </button>
+                                        <input  class="btn continuar" type="submit" value="Continuar">
                                     </div>
                                 </form>
                                 <hr>
@@ -39,6 +37,11 @@
                                     <p class="texto-cadastro"><a href="/dados-pessoais">Esqueceu a senha?</a></p>
                                 </div>
                             </div>
+                            <% if(message) { %>
+                                <p>
+                                    <label style="color:Red"><%= message %></label>
+                                </p>
+                            <%}%>
                         </div>
                     </div>
                 </div>
