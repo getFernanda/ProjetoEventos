@@ -25,11 +25,24 @@
       </ul>
       <ul class="navbar-nav ml-auto header-buttons">
           <li class="nav-item text-center">
-            <a class="nav-link home-button" href="/cadastro">Inscreva-se</a>
+            <a class="nav-link btn home-button" href="/cadastro">Inscreva-se</a>
           </li>
+          <% if(userSession) { %>
           <li class="nav-item text-center">
-            <a class="nav-link home-button" href="/login">Login</a>
+            <div class="btn-group">
+              <button type="button" class="btn dropdown-toggle home-button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <%= userSession.nome %>
+              </button>
+              <div class="dropdown-menu">
+                <a class="dropdown-item " href="/auth/logout">Sair</a>
+              </div>
+            </div>
           </li>
+          <% }else{ %>
+          <li class="nav-item text-center">
+            <a class="nav-link btn home-button" href="/auth/login">Login</a>
+          </li>
+          <% } %>
       </ul>
     </div>
   </nav>

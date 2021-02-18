@@ -11,7 +11,6 @@ module.exports = function (passport) {
     passport.deserializeUser(async (id, done) => {
         try {
             var user = await User.findOne({ where: { id: id } });
-            console.log(user);
             done(null, user);
         } catch (err) {
             done(err, null);
@@ -25,7 +24,6 @@ module.exports = function (passport) {
         async (username, password, done) => {
             try {
                 var user = await User.findOne({ where: { email: username } });
-                console.log(user);
 
                 // usuário inexistente
                 if (!user) { return done(null, false) }

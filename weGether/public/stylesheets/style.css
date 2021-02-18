@@ -159,6 +159,7 @@ input.continuar{
   font-size: 22px;
   padding-left: 40px;
   padding-right: 40px;
+  border-radius:2px ;
 }
 
 input.continuar:hover{
@@ -246,7 +247,6 @@ form.formulario input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
 
 .home-button {
   margin-right: 10px;
-  margin-top: 20px;
   background-color: #F5C651 !important;
   color: white !important;
   border: none;
