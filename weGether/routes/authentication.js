@@ -1,26 +1,15 @@
 const express = require('express');
 const passport = require('passport');
 const router = express.Router();
+const UserController = require("./../controllers/UserControllers");
 
-router.get('/login', function(req, res, next) {
-  if (req.query.fail)
-        res.render('login', { message: 'Usuário e/ou senha incorretos!' });
-    else
-        res.render('login', { message: null });
-});
+/* TODO: Login */
+router.get('/login', UserController.login);
+router.post('/login', UserController.authenticate);
 
-/* POST login page */
-router.post('/login',
-    passport.authenticate('local', { 
-        successRedirect: '/', 
-        failureRedirect: '/login?fail=true' 
-    })
-);
-
-router.get('/logout', function(req, res){
-    req.logout();
-    res.redirect('/'); //Can fire before session is destroyed?
-  }
-);
+/**
+ * TODO: Logout
+ */
+router.get('/logout', UserController.logout);
 
 module.exports = router;

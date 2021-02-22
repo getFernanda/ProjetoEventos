@@ -41,9 +41,7 @@ router.get('/trilha', function(req, res, next){
   res.render('trilha')
 });
 
-router.get('/cadastro', function(req, res, next){
-  res.render('cadastro')
-});
+
 
 
 router.get('/quem-somos', function(req, res, next){

@@ -364,7 +364,7 @@ main {
   justify-content: center;
   align-items: center;
 }
-.cadastro button {
+.cadastro .button {
   background-color: #f5c651;
   color: white;
   border: none;
@@ -372,10 +372,7 @@ main {
   padding: 10px;
   width: 200px;
 }
-.cadastro button a {
-  text-decoration: none;
-  color: white;
-}
+
 .main-cadastro {
   display: flex;
   justify-content:space-around;

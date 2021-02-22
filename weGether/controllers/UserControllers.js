@@ -1,51 +1,44 @@
-const bcrypt = require("bcrypt");
-const users = require("../data/users");
-const cards = require("../data/cards");
-const saveData = require("../utils/saveData");
+const bcrypt = require("bcryptjs");
+const { User } = require("./../app/models");
+const { validationResult } = require('express-validator');
 
 module.exports = {
   create(req, res, next) {
-    res.render('create-user');
+    res.render('cadastro',  { erros: null });
   },
 
-  save(req, res, next) {
-    let id = users.length + 1;
-    req.body.password = bcrypt.hashSync(req.body.password, 10);
-    let user = { id, ...req.body }
-    users.push(user)
+  async save(req, res, next) {
+    const result = validationResult(req);
 
-    saveData(users, "users.js");
+    if (!result.isEmpty()) {
+      console.log(result.array());
+      res.render('cadastro', { erros: result.array() });
+    }
+    
+    req.body.senha = bcrypt.hashSync(req.body.senha, 10);
+    let user = { ...req.body }
+    await User.create(user);
 
-    res.render('create-user', { added: true });
+    res.render('login', { added: true, erros: null });
   },
 
   login(req, res, next) {
-    res.render('login');
+    if (req.query.fail)
+        res.render('login', { message: 'Usuário e/ou senha incorretos!' });
+    else
+        res.render('login', { message: null });
   },
 
   authenticate(req, res, next) {
-    let { email, password } = req.body;
-    let user = users.find(user => email == user.email);
-
-    if(!user){
-      return res.render('login', { notFound: true });
-    }
-
-    if(!bcrypt.compareSync(password, user.password)){
-      return res.render('login', { notFound: true });
-    }
-
-    // removendo a propriedade password para nao criar sessao
-    // contendo a senha do usuario logado
-    delete user.password;
-
-    req.session.user = user;
-
-    res.render('index', { user: req.session.user, cards });
+    passport.authenticate('local', { 
+      successRedirect: '/', 
+      failureRedirect: '/login?fail=true' 
+    })
   },
 
   logout(req, res, next) {
     req.session.destroy();
+    req.logout();
     res.redirect('/');
   }
 }
