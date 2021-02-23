@@ -798,6 +798,16 @@ p button.agenda{
   color: #269599;
   line-height: 20px; 
 }
+.events-list{
+  display: flex;
+  flex-wrap: wrap;
+}
+.card-events {
+  margin-left: 30px;
+  margin-right: 50px;
+  background-color: #f5c651;
+  box-shadow: 5px 5px 5px grey ;
+}
 
 
 
