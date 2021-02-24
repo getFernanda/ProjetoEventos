@@ -803,12 +803,29 @@ p button.agenda{
   flex-wrap: wrap;
 }
 .card-events {
-  margin-left: 30px;
-  margin-right: 50px;
+  margin: 30px 20px 50px 20px;
   background-color: #f5c651;
-  box-shadow: 5px 5px 5px grey ;
+  box-shadow: 5px 5px 5px  grey ;
 }
-
+.search-area{
+  height: 120vh;
+  display: flex;
+  align-items: center;
+}
+.form-pesquisa {
+  display: flex;
+}
+.search-button {
+  margin-left: 20px;
+  height: 42px;
+  width: 200px;
+  background-color: #f5c651;
+  border: none;
+  color: white;
+}
+.search-input {
+  width: 400px;
+}
 
 
 

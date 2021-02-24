@@ -32,8 +32,22 @@ router.post('/create', upload.any(), [
 
 ] ,EventController.createEvent);
 router.get('/edit/:id', EventController.editEvent);
-router.post('/edit/:id', EventController.updateEvent);
+router.post('/edit/:id', [
+  check('nome').isLength({min:3}).withMessage('O nome do evento deve ter mais de 3 caracteres.'),
+  check('tema').isLength({min:3}).withMessage('O tema deve ter mais de 3 caracteres'),
+    check('data_inicio'),
+    check('data_fim'),
+    check('hora_inicio').isInt({ allow_leading_zeroes: true }).withMessage('A hora de início deve ser um número.'),
+    check('hora_fim').isInt({ allow_leading_zeroes: true }).withMessage('A hora do fim deve ser um número.'),
+    check('preco').isInt({ allow_leading_zeroes: true }).withMessage('O preço deve ser um número.'),
+    check('inicio_vendas'),
+    // check('link_imagem').isLength({min:5}).withMessage('Deve conter uma url')
+] , EventController.updateEvent);
 router.get('/list', EventController.listEvent);
-router.post('/delete/:id', EventController.deleteEvent)
+router.post('/delete/:id', EventController.deleteEvent);
+router.get('/search', EventController.showSearchBar);
+router.get('/searchResult', [
+  check('key').isLength({min: 2}).withMessage('Sua pesquisar precisa ter pelo menos 2 letras.')
+] ,EventController.searchResult)
 
 module.exports = router;

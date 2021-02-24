@@ -1,5 +1,5 @@
 module.exports = (sequelize, DataType) => {
-    const Evento = sequelize.define('Registrar', {
+    const Evento = sequelize.define('Events', {
         id: {
             type: DataType.INTEGER,
             primaryKey: true,
@@ -15,7 +15,7 @@ module.exports = (sequelize, DataType) => {
         inicio_vendas: DataType.DATE,
         link_imagem: DataType.STRING
     },{
-        tableName: 'registrar',
+        tableName: 'events',
         timeStamps: false
     })
 

@@ -1,12 +1,14 @@
-const { Registrar } = require('../models')
+const { Events } = require('../models')
 const {check, validationResult, body} = require('express-validator');
+const Sequelize = require('Sequelize')
+const Op = Sequelize.Op
 
 module.exports = {
     showCreateEventForm: (req, res) => {
         res.render('registrar-evento')
     },
     listEvent: async(req, res) => {
-        let eventList = await Registrar.findAll()
+        let eventList = await Events.findAll()
         res.render('home-do-evento', {eventList})
     },
     createEvent: async (req, res) => {
@@ -17,7 +19,7 @@ module.exports = {
             let link_imagem = files[0].originalname
        
         try {
-           let newEvent = await Registrar.create({
+           let newEvent = await Events.create({
                nome,
                tema,
                data_inicio,
@@ -42,45 +44,79 @@ module.exports = {
     editEvent: async(req, res)=> {
         const {id} = req.params
 
-        const evento = await Registrar.findByPk(id)
+        const evento = await Events.findByPk(id)
 
         return res.render('editar-eventos', {evento})
     },
     updateEvent: async(req, res)=> {
         const {nome, tema, data_inicio, data_fim, hora_inicio, hora_fim, preco, inicio_vendas, link_imagem} = req.body
         const {id} = req.params
-        try {
-            const resultado = await Registrar.update({
-               nome,
-               tema,
-               data_inicio,
-               data_fim,
-               hora_inicio,
-               hora_fim,
-               preco,
-               inicio_vendas,
-               link_imagem
-            }, {
-                where: {
-                   id
-                }
-            })
-            console.log(resultado)
-            res.redirect('/events/list')
-
-        }catch(error) {
-           console.log(error)
+        let errorList = validationResult(req)
+        if(errorList.isEmpty()){
+            try {
+                const resultado = await Events.update({
+                   nome,
+                   tema,
+                   data_inicio,
+                   data_fim,
+                   hora_inicio,
+                   hora_fim,
+                   preco,
+                   inicio_vendas,
+                   link_imagem
+                }, {
+                    where: {
+                       id
+                    }
+                })
+                console.log(resultado)
+                res.redirect('/events/list')
+    
+            }catch(error) {
+               console.log(error)
+            }
+        } else {
+            const evento = await Events.findByPk(id)
+            res.render('editar-eventos', {evento: evento,
+            errors: errorList.errors})
         }
+            
     },
     deleteEvent: async(req,res)=>{
         const {id} = req.params
 
-        const resultado = await Registrar.destroy({
+        const resultado = await Events.destroy({
             where: {
                 id
             }
         })
         res.redirect('/events/list')
+    },
+    showSearchBar: async(req, res)=> {
+         res.render('pesquisar')
+    },
+    searchResult: async(req, res)=> {
+        let {key} = req.query
+        let errorList = validationResult(req)
+        if(errorList.isEmpty()){
+            try{
+                let events = await Events.findAll({
+                    where: {
+                       nome: {
+                           [Op.like]: `%${key}%`
+                       }
+                    }
+                })
+                res.render('resultado-pesquisar', {events})
+            }catch(error){
+                res.send(error)
+            }
+            
+        }
+        else{
+            res.render('pesquisar', {errors: errorList.errors})
+        }
+       
     }
 
 }

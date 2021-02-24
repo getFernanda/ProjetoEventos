@@ -5,6 +5,15 @@
 <div class="conteiner">
     <div class="cadastro mb-4">
         <h1 class="form-titulo">Editar as informações do evento</h1>
+        <% if(typeof(errors) != 'undefined'){ %> 
+            <ul>
+                <% errors.forEach((error)=>{ %>
+                    <div class="alert alert-danger" role="alert">
+                        <%= error.msg %> 
+                      </div>
+               <% }) %> 
+            </ul>
+        <% } %> 
         <form class="form-horizontal formulario" action="/events/edit/<%= evento.id %>" method="post">
             <div class="form-group row">
             <div class="col-sm-12">
