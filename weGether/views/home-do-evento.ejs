@@ -1,0 +1,34 @@
+<%- include('./partials/head'); %>
+
+<body>
+  <%- include('./partials/header'); %>
+  <main>
+    <div class="container events-list">
+      <% eventList.forEach(function(event) { %>
+       
+        <div class="card card-events" style="width: 18rem;">
+          <img class="card-img-top" src="/img/<%= event.link_imagem %> " alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title"><%= event.nome %> </h5>
+            <p class="card-text">Tema: <%= event.tema %> </p>
+            <p class="card-text">Começa em: <%= event.data_inicio %></p>
+            <p class="card-text">Preço: R$ <%= event.preco %>,00 </p>
+          </div>
+          <div class="card-body">
+            <a href="#" class="btn btn-primary">Inscreva-se</a>
+            <a href="/events/edit/<%= event.id %> " class="btn btn-secondary">Editar evento</a>
+            <form action="/events/delete/<%= event.id %> " method="post">
+               <button class="submit btn btn-danger">Excluir evento</button>
+            </form>
+          </div>
+        </div>
+    <%  })%> 
+    </div>
+    
+    
+    
+  </main>
+  
+
+</body>
+<%- include('./partials/footer'); %>
