@@ -10,9 +10,11 @@ const authRouter = require('./routes/authentication');
 const passport = require('passport');
 const session = require('express-session');
 
+var bodyParser = require('body-parser');
+
 function authenticationMiddleware(req, res, next) {
   if (req.isAuthenticated()) return next();
-  res.redirect('/auth/login?fail=true');
+  res.redirect('/auth/login');
 }
 
 var app = express();
@@ -20,6 +22,12 @@ var app = express();
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
+
+//app.use(bodyParser.urlencoded({ extended: true })) // parse application/x-www-form-urlencoded
+//app.use(bodyParser.json()) // parse application/json
+
+app.use(express.urlencoded({ extended: true }));
+//app.use(express.json());
 
 // Init passport configuration
 require('./auth')(passport);
@@ -33,8 +41,6 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 app.use(logger('dev'));
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 

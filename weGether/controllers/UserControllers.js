@@ -1,6 +1,7 @@
 const bcrypt = require("bcryptjs");
 const { User } = require("./../app/models");
 const { validationResult } = require('express-validator');
+const passport = require("passport");
 
 module.exports = {
   create(req, res, next) {
@@ -14,8 +15,8 @@ module.exports = {
       console.log(result.array());
       res.render('cadastro', { erros: result.array() });
     }
-    
-    req.body.senha = bcrypt.hashSync(req.body.senha, 10);
+
+    req.body.password = bcrypt.hashSync(req.body.senha, 10);
     let user = { ...req.body }
     await User.create(user);
 
@@ -24,16 +25,23 @@ module.exports = {
 
   login(req, res, next) {
     if (req.query.fail)
-        res.render('login', { message: 'Usuário e/ou senha incorretos!' });
+        res.render('login', { message: 'Usuário e/ou senha incorretos!', erros: null });
     else
-        res.render('login', { message: null });
+        res.render('login', { message: null, erros: null });
   },
 
-  authenticate(req, res, next) {
-    passport.authenticate('local', { 
-      successRedirect: '/', 
-      failureRedirect: '/login?fail=true' 
-    })
+  async authenticate(req, res, next) {
+    const result = validationResult(req);
+
+    if (!result.isEmpty()) {
+      console.log(result.array());
+      res.render('login', { erros: result.array(), message: null });
+    }
+    
+    return passport.authenticate('local', { 
+      successRedirect: '/',
+      failureRedirect: '/auth/login?error=true' 
+    })(req, res, next);
   },
 
   logout(req, res, next) {

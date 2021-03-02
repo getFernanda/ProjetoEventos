@@ -29,20 +29,9 @@ router.get('/meus-eventos', function(req, res, next) {
   res.render('meus_eventos');
 });
 
-router.get('/login', function(req, res, next) {
-  passport.authenticate('local', { 
-    successRedirect: '/', 
-    failureRedirect: '/login?fail=true' 
-  })
-  res.render('login');
-});
-
 router.get('/trilha', function(req, res, next){
   res.render('trilha')
 });
-
-
-
 
 router.get('/quem-somos', function(req, res, next){
   res.render('quem-somos')
