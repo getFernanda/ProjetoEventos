@@ -1,6 +1,6 @@
 module.exports = {
   username: 'root',
-  password: '992900kkPP*',
+  password: '123456',
   database: 'wegether',
   host: 'localhost',
   dialect: 'mysql',

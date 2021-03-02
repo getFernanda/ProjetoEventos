@@ -5,39 +5,48 @@
 <div class="conteiner">
     <div class="cadastro mb-4">
         <h1 class="form-titulo">Criar um novo evento</h1>
+        <% if(typeof(errors) != 'undefined'){ %> 
+            <ul>
+                <% errors.forEach((error)=>{ %>
+                    <div class="alert alert-danger" role="alert">
+                        <%= error.msg %> 
+                      </div>
+               <% }) %> 
+            </ul>
+        <% } %> 
         <form class="form-horizontal formulario" action="/events/create" method="POST" enctype="multipart/form-data">
             <div class="form-group row">
             <div class="col-sm-12">
-                <input placeholder="Nome do evento" type="text" class="form-control" name="nome">
+                <input placeholder="Nome do evento" type="text" class="form-control" name="nome" value="<%= event.nome %> ">
             </div>
             </div>
             <div class="form-group row">
             <div class="col-sm-9">
-                <input placeholder="Tema do evento"type="text" class="input-cadastro" name="tema">
+                <input placeholder="Tema do evento"type="text" class="input-cadastro" name="tema" value="<%= event.tema %> ">
             </div>   
             </div>
 
             <div class="form-group row"> 
             <div class="col-sm-9">
-                <input placeholder="Data de início: XX/XX/XXXX"type="date" class="input-cadastro" name="data_inicio">   
+                <input placeholder="Data de início: XX/XX/XXXX"type="date" class="input-cadastro" name="data_inicio" value="<%= event.data_inicio %> ">   
             </div>
             </div>
             
             <div class="form-group row">
             <div class="col-sm-9">
-                <input placeholder="Data do fim: XX/XX/XXXX"type="date" class="input-cadastro" name="data_fim">
+                <input placeholder="Data do fim: XX/XX/XXXX"type="date" class="input-cadastro" name="data_fim" value="<%= event.data_fim %> ">
             </div>
             </div>
 
             <div class="form-group row">
             <div class="col-sm-9">
-                <input placeholder="Horário do início: 00:00"type="text" class="input-cadastro" name="hora_inicio">
+                <input placeholder="Horário do início: 00:00"type="text" class="input-cadastro" name="hora_inicio" value="<%= event.hora_inicio %> ">
             </div>
             </div>
 
             <div class="form-group row">
                 <div class="col-sm-9">
-                    <input placeholder="Horário do término: 00:00" type="text" class="input-cadastro" name="hora_fim">
+                    <input placeholder="Horário do término: 00:00" type="text" class="input-cadastro" name="hora_fim" value="<%= event.hora_fim %> ">
                 </div>
                 </div>
 
@@ -45,7 +54,7 @@
                     <div class="input-group-prepend">
                       <span class="input-group-text">R$</span>
                     </div>
-                    <input type="text" class="form-control" placeholder="Preço" name="preco">
+                    <input type="text" class="form-control" placeholder="Preço" name="preco" value="<%= event.preco %> ">
                     <div class="input-group-append">
                       <span class="input-group-text">.00</span>
                     </div>
@@ -53,13 +62,13 @@
 
             <div class="form-group row">    
                 <div class="col-sm-9">
-                    <input placeholder="Data início das vendas: XX/XX/XXXX"type="date" class="input-cadastro" name="inicio_vendas">
+                    <input placeholder="Data início das vendas: XX/XX/XXXX"type="date" class="input-cadastro" name="inicio_vendas" value="<%= event.inicio_vendas %> ">
             </div>
             </div>  
 
             <div class="form-group row">    
                 <div class="col-sm-9">
-                    <input placeholder="Insira o link do banner do evento" type="file" class="input-cadastro" name="link_imagem">
+                    <input placeholder="Insira o link do banner do evento" type="file" class="input-cadastro" name="link_imagem" value="<%= event.link_imagem %> ">
             </div>
             </div>
             

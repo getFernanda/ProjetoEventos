@@ -2,21 +2,35 @@ const { Events } = require('../models')
 const {check, validationResult, body} = require('express-validator');
 const Sequelize = require('Sequelize')
 const Op = Sequelize.Op
+const moment = require('moment')
 
 module.exports = {
     showCreateEventForm: (req, res) => {
         res.render('registrar-evento')
     },
     listEvent: async(req, res) => {
-        let eventList = await Events.findAll()
-        res.render('home-do-evento', {eventList})
+        let eventList = await Events.findAll({
+            order: [
+                ['data_inicio', 'ASC']
+            ]
+        })
+        
+        let eventListJson = await eventList.map(result=> result.toJSON())
+
+        let newEvents = eventListJson.map((event)=> {
+            return {
+                ...event, 
+                data_inicio: moment(event.data_inicio).format('DD-MM-YYYY')
+            }
+        })
+        res.render('home-do-evento', {eventList: newEvents})
     },
     createEvent: async (req, res) => {
+        let {nome, tema, data_inicio, data_fim, hora_inicio, hora_fim, preco, inicio_vendas} = req.body
+        let file = req.file
+        let link_imagem = file.originalname
         let errorList = validationResult(req)
         if(errorList.isEmpty()){
-            let {nome, tema, data_inicio, data_fim, hora_inicio, hora_fim, preco, inicio_vendas} = req.body
-            let {files} = req
-            let link_imagem = files[0].originalname
        
         try {
            let newEvent = await Events.create({
@@ -37,14 +51,29 @@ module.exports = {
           res.send(err)
        }
     } else {
-        res.render('registrar-evento', {errors:errorList.errors})
+        let event = {
+            nome,
+            tema,
+            data_inicio,
+            data_fim,
+            hora_inicio,
+            hora_fim,
+            preco,
+            inicio_vendas,
+            link_imagem 
+
+        }
+        res.render('registrar-evento-error', {
+            errors:errorList.errors,
+            event
+        })
     }
       
     },
     editEvent: async(req, res)=> {
         const {id} = req.params
 
-        const evento = await Events.findByPk(id)
+        let evento = await Events.findByPk(id)
 
         return res.render('editar-eventos', {evento})
     },
