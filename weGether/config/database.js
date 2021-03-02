@@ -3,5 +3,5 @@ module.exports = {
   password: '123456',
   database: 'wegether',
   host: 'localhost',
-  dialect: 'mysql',
+  dialect: 'mysql'
 }
