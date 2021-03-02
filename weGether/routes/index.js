@@ -1,5 +1,6 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const passport = require('passport');
+const router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -28,18 +29,9 @@ router.get('/meus-eventos', function(req, res, next) {
   res.render('meus_eventos');
 });
 
-router.get('/login', function(req, res, next) {
-  res.render('login');
-});
-
 router.get('/trilha', function(req, res, next){
   res.render('trilha')
 });
-
-router.get('/cadastro', function(req, res, next){
-  res.render('cadastro')
-});
-
 
 router.get('/quem-somos', function(req, res, next){
   res.render('quem-somos')

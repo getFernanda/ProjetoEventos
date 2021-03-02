@@ -149,7 +149,7 @@ input.login::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
   opacity: 1; /* Firefox */
 }
 
-button.continuar{
+input.continuar{
   background-color: #f5c651;
   border: none;
   margin: 0 auto;
@@ -159,9 +159,10 @@ button.continuar{
   font-size: 22px;
   padding-left: 40px;
   padding-right: 40px;
+  border-radius:2px ;
 }
 
-button.continuar:hover{
+input.continuar:hover{
   background-color: #f7ba22;
   color: white;
 }
@@ -246,7 +247,6 @@ form.formulario input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
 
 .home-button {
   margin-right: 10px;
-  margin-top: 20px;
   background-color: #F5C651 !important;
   color: white !important;
   border: none;
@@ -364,7 +364,7 @@ main {
   justify-content: center;
   align-items: center;
 }
-.cadastro button {
+.cadastro .button {
   background-color: #f5c651;
   color: white;
   border: none;
@@ -372,10 +372,7 @@ main {
   padding: 10px;
   width: 200px;
 }
-.cadastro button a {
-  text-decoration: none;
-  color: white;
-}
+
 .main-cadastro {
   display: flex;
   justify-content:space-around;
