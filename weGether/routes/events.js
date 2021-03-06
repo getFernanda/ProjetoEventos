@@ -19,22 +19,38 @@ var storage = multer.diskStorage({
 
 /* GET users listing. */
 router.get('/create', EventController.showCreateEventForm);
-router.post('/create', upload.any(), [
+router.post('/create', upload.single("link_imagem"), [
     check('nome').isLength({min:3}).withMessage('O nome do evento deve ter mais de 3 caracteres.'),
     check('tema').isLength({min:3}).withMessage('O tema deve ter mais de 3 caracteres'),
-    check('data_inicio'),
-    check('data_fim'),
-    check('hora_inicio').isInt({ allow_leading_zeroes: true }).withMessage('A hora de início deve ser um número.'),
-    check('hora_fim').isInt({ allow_leading_zeroes: true }).withMessage('A hora do fim deve ser um número.'),
-    check('preco').isInt({ allow_leading_zeroes: true }).withMessage('O preço deve ser um número.'),
-    check('inicio_vendas'),
-    // check('link_imagem').isLength({min:5}).withMessage('Deve conter uma url')
-
+    check('data_inicio').isLength({min:8}).withMessage("Preencha a data de início"),
+    check('data_fim').isLength({min:8}).withMessage("Preencha a data do fim"),
+    check('hora_inicio').trim().isInt({ allow_leading_zeroes: true }).withMessage('A hora de início deve ser um número.'),
+    check('hora_fim').trim().isInt({ allow_leading_zeroes: true }).withMessage('A hora do fim deve ser um número.'),
+    check('preco').trim().isInt({ allow_leading_zeroes: true }).withMessage('O preço deve ser um número.'),
+    check('inicio_vendas').isLength({min:8}).withMessage("Preencha a data do início das vendas"),
+    check('link_imagem').custom((value, {req})=> {
+      if (!req.file) throw new Error("É preciso carregar um arquivo de imagem como banner do seu evento");
+      return true;
+    })
+  
 ] ,EventController.createEvent);
 router.get('/edit/:id', EventController.editEvent);
-router.post('/edit/:id', EventController.updateEvent);
+router.post('/edit/:id', [
+  check('nome').isLength({min:3}).withMessage('O nome do evento deve ter mais de 3 caracteres.'),
+    check('tema').isLength({min:3}).withMessage('O tema deve ter mais de 3 caracteres'),
+    check('data_inicio').isLength({min:8}).withMessage("Preencha a data de início"),
+    check('data_fim').isLength({min:8}).withMessage("Preencha a data do fim"),
+    check('hora_inicio').trim().isInt({ allow_leading_zeroes: true }).withMessage('A hora de início deve ser um número.'),
+    check('hora_fim').trim().isInt({ allow_leading_zeroes: true }).withMessage('A hora do fim deve ser um número.'),
+    check('preco').trim().isInt({ allow_leading_zeroes: true }).withMessage('O preço deve ser um número.'),
+    check('inicio_vendas').isLength({min:8}).withMessage("Preencha a data do início das vendas"),
+] , EventController.updateEvent);
 router.get('/list', EventController.listEvent);
-router.post('/delete/:id', EventController.deleteEvent)
+router.post('/delete/:id', EventController.deleteEvent);
+router.get('/search', EventController.showSearchBar);
+router.get('/searchResult', [
+  check('key').isLength({min: 2}).withMessage('Sua pesquisar precisa ter pelo menos 2 letras.')
+] ,EventController.searchResult)
 
 
 router.get('/meus-eventos', function(req, res, next) {
