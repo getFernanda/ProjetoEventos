@@ -36,4 +36,13 @@ router.post('/edit/:id', EventController.updateEvent);
 router.get('/list', EventController.listEvent);
 router.post('/delete/:id', EventController.deleteEvent)
 
+
+router.get('/meus-eventos', function(req, res, next) {
+  res.render('meus_eventos');
+});
+
+router.get('/trilha', function(req, res, next){
+  res.render('trilha')
+});
+
 module.exports = router;

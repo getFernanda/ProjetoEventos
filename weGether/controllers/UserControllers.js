@@ -1,5 +1,5 @@
 const bcrypt = require("bcryptjs");
-const { User } = require("./../app/models");
+const { User } = require("./../models");
 const { validationResult } = require('express-validator');
 const passport = require("passport");
 
