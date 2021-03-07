@@ -7,9 +7,8 @@ const logger = require('morgan');
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 const authRouter = require('./routes/authentication');
-const eventoRouter = require('./routes/events')
 const passport = require('passport');
-var eventsRoter = require('./routes/events');
+var eventsRouter = require('./routes/events');
 const session = require('express-session');
 
 var bodyParser = require('body-parser');
@@ -56,7 +55,8 @@ app.use((req, res, next) => {
 app.use('/auth', authRouter);
 app.use('/user', usersRouter);
 app.use('/', indexRouter);
-app.use('/evento', authenticationMiddleware, eventoRouter);
+app.use('/evento', authenticationMiddleware, eventsRouter);
+app.use('/events', eventsRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
