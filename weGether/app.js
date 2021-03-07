@@ -9,6 +9,7 @@ const usersRouter = require('./routes/users');
 const authRouter = require('./routes/authentication');
 const eventoRouter = require('./routes/events')
 const passport = require('passport');
+var eventsRoter = require('./routes/events');
 const session = require('express-session');
 
 var bodyParser = require('body-parser');
